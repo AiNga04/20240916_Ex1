@@ -46,7 +46,7 @@ public class DBconnectionMySQL {
 //                System.out.println("Không có user nào với roleId được chỉ định.");
 //            }
 
-            Usermodel newUser = new Usermodel(43, "ainga", "password123", "nga.doe@example.com", "ái Nga", "nga.pnp", "0123456789", 4, new Date(1));
+            Usermodel newUser = new Usermodel(34, "ainga", "password123", "nga.doe@example.com", "ái Nga", "nga.pnp", "0123456789", 4, new Date(1));
             userDao.insert(newUser);
             System.out.println("User inserted successfully with ID: " + newUser.getId());
         } catch (Exception e) {

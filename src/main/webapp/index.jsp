@@ -5,6 +5,6 @@
   <title>JSP - Hello World</title>
 </head>
 <body>
-<a href="login">Login</a>
+<a href="/_2024_09_16_Web_Servlet_war/login">Login</a>
 </body>
 </html>

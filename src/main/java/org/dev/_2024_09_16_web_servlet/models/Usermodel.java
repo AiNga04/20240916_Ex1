@@ -3,6 +3,7 @@ package org.dev._2024_09_16_web_servlet.models;
 import java.io.Serializable;
 import java.sql.Date;
 
+@SuppressWarnings("serial")
 public class Usermodel implements Serializable {
     private int id;
     private String username;
