@@ -13,10 +13,11 @@
 <html>
 <head>
     <title>Tạo tài khoản mới</title>
-    <link rel="stylesheet" href="/WEB-INF/css/login.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+
 </head>
 <body>
-<form action="/_2024_09_16_Web_Servlet_war/login" method="post">
+<form action="${pageContext.request.contextPath}/login" method="post">
     <!-- Thông báo alert nếu có -->
     <c:if test="${alert != null}">
         <h3 class="alert alert-danger">${alert}</h3>
@@ -30,7 +31,6 @@
         <div class="container">
             <label for="username"><b>Username</b></label>
             <input type="text" id="username" placeholder="Enter Username" name="username" required>
-
 
             <label for="password"><b>Password</b></label>
             <input type="password" id="password" placeholder="Enter Password" name="password" required>
