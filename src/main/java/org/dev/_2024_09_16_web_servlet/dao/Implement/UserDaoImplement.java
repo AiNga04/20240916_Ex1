@@ -67,6 +67,7 @@ public class UserDaoImplement extends DBconnectionMySQL implements IUserDao {
                 user.setFullname(resultSet.getString("fullname"));
                 user.setImage(resultSet.getString("image"));
                 user.setPhone(resultSet.getString("phone"));
+                user.setRoleid(resultSet.getInt("roleid"));
                 user.setCreatedate(resultSet.getDate("createdate"));
             }
         } catch (SQLException e) {
@@ -133,6 +134,7 @@ public class UserDaoImplement extends DBconnectionMySQL implements IUserDao {
                 user.setFullname(resultSet.getString("fullname"));
                 user.setImage(resultSet.getString("image"));
                 user.setPhone(resultSet.getString("phone"));
+                user.setRoleid(resultSet.getInt("roleid"));
                 user.setCreatedate(resultSet.getDate("createdate"));
             }
 
