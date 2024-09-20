@@ -22,4 +22,30 @@ public class UserServiceImplement implements IUserService {
     public Usermodel FindByUsername(String username) {
         return userDao.findByUsername(username);
     }
+
+    //    register
+    @Override
+    public void insertUser(Usermodel user) {
+
+    }
+
+    @Override
+    public boolean register(String email, String password, String username, String fullname, String phone) {
+        return false;
+    }
+
+    @Override
+    public boolean checkExistEmail(String email) {
+        return false;
+    }
+
+    @Override
+    public boolean checkExistPhone(String phone) {
+        return false;
+    }
+
+    @Override
+    public boolean checkExistUsername(String username) {
+        return false;
+    }
 }

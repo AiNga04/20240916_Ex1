@@ -1,0 +1,90 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Nga
+  Date: 9/19/2024
+  Time: 3:02 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+<body>
+<form action="${pageContext.request.contextPath}/register" method="post">
+    <h2>Tạo tài khoản mới<</h2>
+    <c:if test="${alert !=null}">
+        <h3 class="alert alertdanger">${alert}</h3>
+    </c:if>
+    <%--    Code giao dien registor--%>
+    <section class="vh-100 bg-image"
+             style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                <form>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg"/>
+                                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" id="form3Example3cg" class="form-control form-control-lg"/>
+                                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="password" id="form3Example4cg"
+                                               class="form-control form-control-lg"/>
+                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="password" id="form3Example4cdg"
+                                               class="form-control form-control-lg"/>
+                                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" value=""
+                                               id="form2Example3cg"/>
+                                        <label class="form-check-label" for="form2Example3g">
+                                            I agree all statements in <a href="#!" class="text-body"><u>Terms of
+                                            service</u></a>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button" data-mdb-button-init
+                                                data-mdb-ripple-init
+                                                class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                            Register
+                                        </button>
+                                    </div>
+
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                                                                                                            class="fw-bold text-body"><u>Login
+                                        here</u></a></p>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+</body>
+</html>

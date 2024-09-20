@@ -1,4 +1,4 @@
-package org.dev._2024_09_16_web_servlet.controllers.user;
+package org.dev._2024_09_16_web_servlet.controllers.logins.user;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

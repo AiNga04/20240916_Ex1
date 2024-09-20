@@ -2,6 +2,7 @@ package org.dev._2024_09_16_web_servlet.dao;
 
 import org.dev._2024_09_16_web_servlet.models.Usermodel;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserDao {
@@ -22,4 +23,12 @@ public interface IUserDao {
 //    Usermodel changeEmail(String email);
 //    Usermodel changePassword(String oldPassword);
     void insert(Usermodel user);
+
+    boolean checkExistUsername(String username) throws SQLException;
+
+    boolean checkExistEmail(String email) throws SQLException;
+
+    boolean changePassword(String email, String newEncodedPassword) throws SQLException;
+
+    boolean checkExistPhone(String phone);
 }

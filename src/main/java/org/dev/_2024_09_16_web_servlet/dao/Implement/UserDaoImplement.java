@@ -178,6 +178,55 @@ public class UserDaoImplement extends DBconnectionMySQL implements IUserDao {
         }
     }
 
+    @Override
+    public boolean checkExistUsername(String username) throws SQLException {
+        String query = "SELECT 1 FROM users WHERE username = ?";
+        connection = DBconnectionMySQL.getConnection();
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, username);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return false;
+        }
+    }
+
+    @Override
+    public boolean checkExistEmail(String email) throws SQLException {
+        String query = "SELECT 1 FROM users WHERE email = ?";
+        connection = DBconnectionMySQL.getConnection();
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, email);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public boolean changePassword(String email, String newEncodedPassword) throws SQLException {
+        String sql = "UPDATE users SET password = ? WHERE email = ?";
+        connection = DBconnectionMySQL.getConnection();
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setString(1, newEncodedPassword);
+            ps.setString(2, email);
+            int rowsUpdated = ps.executeUpdate();
+            return rowsUpdated > 0;
+        } catch (SQLException exception) {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean checkExistPhone(String phone) {
+        return false;
+    }
+
     // Hàm để đóng tài nguyên
     private void closeResources() {
         try {
