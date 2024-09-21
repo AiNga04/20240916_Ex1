@@ -7,32 +7,42 @@ body {
     color: #333;
 }
 
-/* Styling for the form container */
-form {
+/* Styling for the login section */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the login form */
+.container {
     width: 100%;
     max-width: 400px;
-    margin: 50px auto;
-    padding: 25px;
+    padding: 30px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
 }
 
-form:hover {
+.container:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling for headings */
-h2 {
+/* Header styling */
+.login-header {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
     color: #0066cc;
     font-weight: bold;
-    margin-bottom: 25px;
     font-size: 1.8em;
 }
 
-/* Container for image */
+/* Image container */
 .imgcontainer {
     text-align: center;
     margin-bottom: 20px;
@@ -65,7 +75,7 @@ input[type="password"]:focus {
 }
 
 /* Styling for buttons */
-button {
+.btn-custom {
     background-color: #28a745;
     color: white;
     padding: 14px 20px;
@@ -78,33 +88,19 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btn-custom:hover {
     background-color: #218838;
 }
 
-/* Cancel button styling */
-.cancelbtn {
-    background-color: #dc3545;
-    transition: background-color 0.3s ease;
-}
-
-.cancelbtn:hover {
-    background-color: #c82333;
-}
-
-/* Styling for the container below input fields */
-.container {
-    padding: 20px;
-    margin-bottom: 20px;
+/* Form check styling */
+.form-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
 }
 
 /* Password link styling */
-span.password {
-    float: right;
-    padding-top: 26px;
-    font-size: 0.9em;
-}
-
 a {
     color: #007acc;
     text-decoration: none;
@@ -115,24 +111,19 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Alert message styling */
-.alert-danger {
-    color: white;
-    background-color: #ff4d4d;
+/* Success and alert message styling */
+.text-success, .text-danger {
     text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-weight: bold;
+    margin: 10px 0;
 }
 
-/* Checkbox styling */
-input[type="checkbox"] {
-    margin-top: 16px;
-    cursor: pointer;
+/* Container for the registration link */
+.text-center {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Background color for the last container (footer) */
+/* Additional styling for the last container */
 .container:last-of-type {
     background-color: #e9ecef;
     border-radius: 0 0 15px 15px;
