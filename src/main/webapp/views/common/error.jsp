@@ -14,6 +14,6 @@
 <body>
     <h2>Error</h2>
     <p>There was an error processing your request. Please try again later.</p>
-    <a href="../../index.jsp">Go to Home</a>
+    <a href="../../WEB-INF/decorator/index.jsp">Go to Home</a>
 </body>
 </html>
